@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9707DB3D-077A-4356-B66D-1D632D7EF7E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Trabajo1</RootNamespace>
+    <AssemblyName>Trabajo1</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumno.Designer.cs">
+      <DependentUpon>Alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlumnoReporteCrystal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlumnoReporteCrystal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="CURSOID.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CURSOID.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Cursos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cursos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CursosXd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CursosXd.Designer.cs">
+      <DependentUpon>CursosXd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EscuelaMatriculaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EscuelaMatriculaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EscuelaMatriculaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EscuelaMatriculaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EscuelaMatriculaDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EscuelaMatriculaDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EscuelaMatriculaDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EscuelaMatriculaDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EscuelaMatriculaDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EscuelaMatriculaDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EscuelaMatriculaDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EscuelaMatriculaDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="IniciarSesion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IniciarSesion.Designer.cs">
+      <DependentUpon>IniciarSesion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManejadorVistas.cs" />
+    <Compile Include="Matricula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Matricula.Designer.cs">
+      <DependentUpon>Matricula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuario.Designer.cs">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AlumnosReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlumnosReporte.Designer.cs">
+      <DependentUpon>AlumnosReporte.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Alumno.resx">
+      <DependentUpon>Alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlumnoReporteCrystal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AlumnoReporteCrystal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CursosXd.resx">
+      <DependentUpon>CursosXd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IniciarSesion.resx">
+      <DependentUpon>IniciarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Matricula.resx">
+      <DependentUpon>Matricula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Usuario.resx">
+      <DependentUpon>Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AlumnosReporte.resx">
+      <DependentUpon>AlumnosReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CURSOID.xsc">
+      <DependentUpon>CURSOID.xsd</DependentUpon>
+    </None>
+    <None Include="CURSOID.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CURSOID.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CURSOID.xss">
+      <DependentUpon>CURSOID.xsd</DependentUpon>
+    </None>
+    <None Include="Cursos.xsc">
+      <DependentUpon>Cursos.xsd</DependentUpon>
+    </None>
+    <None Include="Cursos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Cursos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Cursos.xss">
+      <DependentUpon>Cursos.xsd</DependentUpon>
+    </None>
+    <None Include="EscuelaMatriculaDataSet.xsc">
+      <DependentUpon>EscuelaMatriculaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EscuelaMatriculaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EscuelaMatriculaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EscuelaMatriculaDataSet.xss">
+      <DependentUpon>EscuelaMatriculaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="EscuelaMatriculaDataSet1.xsc">
+      <DependentUpon>EscuelaMatriculaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="EscuelaMatriculaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EscuelaMatriculaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EscuelaMatriculaDataSet1.xss">
+      <DependentUpon>EscuelaMatriculaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="EscuelaMatriculaDataSet2.xsc">
+      <DependentUpon>EscuelaMatriculaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="EscuelaMatriculaDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EscuelaMatriculaDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EscuelaMatriculaDataSet2.xss">
+      <DependentUpon>EscuelaMatriculaDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="EscuelaMatriculaDataSet3.xsc">
+      <DependentUpon>EscuelaMatriculaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="EscuelaMatriculaDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EscuelaMatriculaDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EscuelaMatriculaDataSet3.xss">
+      <DependentUpon>EscuelaMatriculaDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="EscuelaMatriculaDataSet4.xsc">
+      <DependentUpon>EscuelaMatriculaDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="EscuelaMatriculaDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EscuelaMatriculaDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EscuelaMatriculaDataSet4.xss">
+      <DependentUpon>EscuelaMatriculaDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="EscuelaMatriculaDataSet5.xsc">
+      <DependentUpon>EscuelaMatriculaDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="EscuelaMatriculaDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EscuelaMatriculaDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EscuelaMatriculaDataSet5.xss">
+      <DependentUpon>EscuelaMatriculaDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\015-enter-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\012-id-card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drag-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drag-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\store-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\008-lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\002-unlock.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
